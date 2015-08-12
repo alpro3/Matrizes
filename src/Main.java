@@ -3,7 +3,9 @@ public class Main {
     //1
     static int nossoarray[][];
     static int resultado[][];
-    static int[][] matriz23 = {{1,2},{3,4,5}};
+    static int[][] matriz23 = {{1, 2}, {3, 4, 5}};
+    static int[][] a = {{2, 3}, {0, 1}, {-1, 4}};
+    static int[][] b = {{1, 2, 3}, {-2, 0, 4}};
 
     public static void main(String[] args) {
         criaArray();
@@ -16,10 +18,20 @@ public class Main {
         imprimeMatriz(resultado);
         System.out.println("\n");
 
-        imprimeMatriz(matriz23);
+        imprimeMatriz(nossoarray);
         System.out.println("\n");
 
-        imprimeMatriz(somaMatrizes(matriz23,matriz23));
+        System.out.println("Transpõe");
+        imprimeMatriz(somaMatrizes(matriz23, matriz23));
+
+        System.out.println("Transopsta");
+        imprimeMatriz(transpoeMatriz(matriz23));
+
+        imprimeMatriz(a);
+        imprimeMatriz(b);
+        System.out.println("Multiplica");
+
+        imprimeMatriz(multiplicaMatriz(a, b));
 
     }
 
@@ -28,8 +40,8 @@ public class Main {
     */
     public static void criaArray() {
         nossoarray = new int[5][6];
-        for(int i = 0; i < nossoarray.length; i++) {
-            for(int j = 0; j < nossoarray[0].length; j++) {
+        for (int i = 0; i < nossoarray.length; i++) {
+            for (int j = 0; j < nossoarray[0].length; j++) {
                 nossoarray[i][j] = i + j;
             }
         }
@@ -40,7 +52,7 @@ public class Main {
         for (int i = 0; i < nossoarray.length; i++) {
             for (int j = 0; j < nossoarray[0].length; j++) {
                 System.out.print(nossoarray[i][j]);
-           }
+            }
             System.out.print("\n");
         }
     }
@@ -56,12 +68,12 @@ public class Main {
     }
 
     //Imprime a matriz recebida
-    public static void imprimeMatriz(int[][] matriz){
+    public static void imprimeMatriz(int[][] matriz) {
         System.out.println("Matriz: ");
-        for (int i = 0; i < matriz.length; i++){
+        for (int i = 0; i < matriz.length; i++) {
             System.out.print("|");
             for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print(" "+matriz[i][j]+" ");
+                System.out.print(" " + matriz[i][j] + " ");
             }
             System.out.print("|");
             System.out.println();
@@ -74,28 +86,43 @@ public class Main {
     (lembre-se das restrições para se somar matrizes).
     */
     public static int[][] somaMatrizes(int[][] m1, int[][] m2) {
-        if(m1.length != m2.length || m1[0].length != m2[0].length) {
-            System.out.println("As matrizes não são de mesma ordem, não é possível realizar a soma.");
+        if ((m1.length != m2.length) || (m1[0].length != m2[0].length)) {
+            System.out.println("As matrizes não são do mesmo tamanho, não é possível realizar a soma.");
         } else {
-            resultado = new int [m1.length][m2[0].length];
-            for(int i = 0; i < m1.length; i++) {
-                for(int j = 0; j < m2[0].length; j++){
+            resultado = new int[m1.length][m2[0].length];
+            for (int i = 0; i < m1.length; i++) {
+                for (int j = 0; j < m2[0].length; j++) {
                     resultado[i][j] = m1[i][j] + m2[i][j];
                 }
             }
-       }
+        }
         return resultado;
     }
 
     // 3 - Método que recebe uma matriz e retorna a matriz transposta
-    public int[][] transpoeMatriz(int[][] matriz){
+    public static int[][] transpoeMatriz(int[][] matriz) {
         int[][] transposta = new int[matriz.length][matriz.length];
-        for (int i = 0; i < matriz.length ; i++) {
+        for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
                 transposta[i][j] = matriz[j][i];
             }
         }
         return transposta;
+    }
+
+    public static int[][] multiplicaMatriz(int m1[][], int m2[][]) {
+        int maux[][] = new int[m1.length][m2[0].length];
+        if(m1.length != m2[0].length) {
+            return null;
+        } else {
+            for(int i = 0; i < m1.length; i++) {
+                for(int j = -1; j < m2[0].length; j++) {
+                    maux[i][j + 1] = (m1[i][j + 1] * m2[i + 1][j]) + (m1[i][j + 2] * m2[i + 1][j]);
+                    System.out.println(maux[i][j]);
+                }
+            }
+        }
+        return maux;
     }
 
 
