@@ -7,6 +7,7 @@ public class Main {
     static int[][] a = {{2, 3}, {0, 1}, {-1, 4}};
     static int[][] b = {{1, 2, 3}, {-2, 0, 4}};
 
+
     public static void main(String[] args) {
         criaArray();
         printaLinha();
