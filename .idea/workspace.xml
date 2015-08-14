@@ -26,8 +26,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5156695">
-              <caret line="114" column="39" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.7094017">
+              <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -432,12 +432,12 @@
       <option name="number" value="Default" />
       <updated>1439247245269</updated>
       <workItem from="1439247261048" duration="4914000" />
-      <workItem from="1439412147394" duration="7626000" />
+      <workItem from="1439412147394" duration="8124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12540000" />
+    <option name="totallyTimeSpent" value="13038000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -516,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5156695">
-          <caret line="114" column="39" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.7094017">
+          <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
           <folding />
         </state>
       </provider>

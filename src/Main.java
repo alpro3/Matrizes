@@ -7,7 +7,6 @@ public class Main {
     static int[][] a = {{2, 3}, {0, 1}, {-1, 4}};
     static int[][] b = {{1, 2, 3}, {-2, 0, 4}};
 
-
     public static void main(String[] args) {
         criaArray();
         printaLinha();
@@ -120,6 +119,8 @@ public class Main {
                 for(int j = -1; j < m2[0].length; j++) {
                     maux[i][j + 1] = (m1[i][j + 1] * m2[i + 1][j]) + (m1[i][j + 2] * m2[i + 1][j]);
                     System.out.println(maux[i][j]);
+
+
                 }
             }
         }
