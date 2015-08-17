@@ -115,9 +115,9 @@ public class Main {
         if(m1[0].length != m2.length) {
             return null;
         } else {
-            for (int i = 0; i < m1.length; i++) { // aRow
-                for (int j = 0; j < m2[0].length; j++) { // bColumn
-                    for (int k = 0; k < m1[0].length; k++) { // aColumn
+            for (int i = 0; i < m1.length; i++) {
+                for (int j = 0; j < m2[0].length; j++) {
+                    for (int k = 0; k < m1[0].length; k++) {
                         maux[i][j] += m1[i][k] * m2[k][j];
                     }
                 }
