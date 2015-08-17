@@ -112,15 +112,14 @@ public class Main {
 
     public static int[][] multiplicaMatriz(int m1[][], int m2[][]) {
         int maux[][] = new int[m1.length][m2[0].length];
-        if(m1.length != m2[0].length) {
+        if(m1[0].length != m2.length) {
             return null;
         } else {
-            for(int i = 0; i < m1.length; i++) {
-                for(int j = -1; j < m2[0].length; j++) {
-                    maux[i][j + 1] = (m1[i][j + 1] * m2[i + 1][j]) + (m1[i][j + 2] * m2[i + 1][j]);
-                    System.out.println(maux[i][j]);
-
-
+            for (int i = 0; i < m1.length; i++) { // aRow
+                for (int j = 0; j < m2[0].length; j++) { // bColumn
+                    for (int k = 0; k < m1[0].length; k++) { // aColumn
+                        maux[i][j] += m1[i][k] * m2[k][j];
+                    }
                 }
             }
         }
